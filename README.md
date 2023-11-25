@@ -20,12 +20,15 @@ Full adder is a digital circuit used to calculate the sum of three binary bits. 
 
 Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = AB + ACin + BCin
 
- ![image](https://user-images.githubusercontent.com/36288975/163552156-a13e5a56-c638-4110-97d9-8896907c8d25.png)
+
+ ![image](/![Screenshot 2023-11-25 120148](https://github.com/premsuryas/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473858/4b6660b6-2d2f-4bc7-8118-3dfae6b9c38a)
+.png)
 
 #### Figure -01 HALF ADDER 
 
 
-![image](https://user-images.githubusercontent.com/36288975/163552057-b3547877-6d07-45b4-b7e0-bcfebfad9e1d.png)
+![image](![Screenshot 2023-11-25 114302](https://github.com/premsuryas/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473858/9f88374e-8be4-406a-9804-d6e0cb25b4e8)
+.png)
 
 #### Figure -02 FULL ADDER 
 
@@ -36,10 +39,23 @@ Switch ON the main switch
 If the output is 1, then the led glows.
 ### 
 Program:
-/*
+/*half adder
+module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+xor(sum,a,b);
+and(carry,a,b);
+endmodule
+/*full adder
+module ha(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum = ((a^b)^c);
+assign carry = ((a&b) | (b&c) |(c&a));
+endmodule
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by:PREM KUMAR 
+RegisterNumber:23013598  
 */
 Logic symbol & Truthtable
 RTL realization
@@ -48,7 +64,14 @@ RTL realization
 ### RTL
 ### TIMING DIAGRAM
 
+![Screenshot 2023-11-25 114931](https://github.com/premsuryas/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473858/aa0cb80a-3597-40c6-86ab-e6d7937a8d8a)
+
+
 
 ### TRUTH TABLE 
 
+![half adder truth table](https://github.com/premsuryas/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/147473858/2d1462f9-4b28-4361-bddb-2a52d23c3661)
+
+
 ### Result:
+THE HALF ADDER AND FULL ADDER WAS CREATED SUSCESSFULLY
